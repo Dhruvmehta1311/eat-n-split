@@ -24,8 +24,8 @@ const initialFriends = [
 
 const FriendsList = () => {
   return (
-    <div className="w-full  max-w-[1100px] grid grid-cols-2 min-h-[400px]">
-      <section className=" p-10 flex flex-row">
+    <div className="w-full  max-w-[1100px] grid grid-cols-1 md:grid-cols-2 min-h-[250px]">
+      <section className=" p-4 sm:p-8 flex flex-row ">
         <ul className="flex flex-col gap-4 w-full">
           {initialFriends.map((initialFriend) => (
             <Friend

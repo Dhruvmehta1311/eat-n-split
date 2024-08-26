@@ -3,7 +3,7 @@ import React from "react";
 const Friend = ({ name, img, balance }) => {
   return (
     <>
-      <li className="font-semibold w-full hover:bg-orange-100 cursor-pointer rounded items-center justify-between p-2 flex gap-4">
+      <li className=" text-base font-semibold w-full hover:bg-orange-100 cursor-pointer rounded items-center justify-between p-2 flex flex-col sm:flex-row gap-4">
         <div className="flex gap-4">
           <img className="h-10" src={img}></img>
           <div>
@@ -26,7 +26,7 @@ const Friend = ({ name, img, balance }) => {
           </div>
         </div>
         <>
-          <button className="px-6 py-2 bg-orange-400 rounded-md cursor-context-pointer">
+          <button className="px-6 py-2 bg-orange-400 rounded-md cursor-context-pointer w-full sm:w-fit">
             Select
           </button>
         </>
