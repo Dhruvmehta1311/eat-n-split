@@ -10,7 +10,7 @@ const FormSplitBill = ({ initialFriends }) => {
       <section className="flex sm:items-center flex-col sm:flex-row justify-between gap-2 ">
         <label>💸Bill Value: </label>
         <input
-          placeholder="Image URL Here"
+          placeholder=""
           type="text"
           className="max-w-80 h-[40px] rounded pl-4 outline-none"
         />
@@ -18,7 +18,7 @@ const FormSplitBill = ({ initialFriends }) => {
       <section className="flex flex-col sm:items-center sm:flex-row justify-between gap-2 ">
         <label>🤵 Your Expense: </label>
         <input
-          placeholder="Image URL Here"
+          placeholder=""
           type="text"
           className="max-w-80 h-[40px] rounded pl-4 outline-none"
         />
@@ -26,7 +26,8 @@ const FormSplitBill = ({ initialFriends }) => {
       <section className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 ">
         <label>💸Clarke's Expense: </label>
         <input
-          placeholder="Image URL Here"
+          placeholder=""
+          disabled
           type="text"
           className="max-w-80 h-[40px] rounded pl-4 outline-none"
         />
