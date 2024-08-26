@@ -24,9 +24,9 @@ const initialFriends = [
   },
   {
     id: 123437,
-    name: "Advik",
-    img: "https://avatar.iran.liara.run/public/42",
-    balance: 0,
+    name: "Tisha",
+    img: "https://avatar.iran.liara.run/public/54",
+    balance: 80,
   },
 ];
 
@@ -42,7 +42,7 @@ function App() {
       <FriendsList initialFriends={initialFriends} />
       <div className="flex flex-col gap-4">
         {showAddFriend ? <FormAddFriend /> : null}
-        <div className="max-w-[500px] sm:max-w-[550px] w-full sm:flex justify-end pr-8 sm:pr-14  pl-12">
+        <div className="max-w-[500px] sm:max-w-[780px] w-full sm:flex justify-end pr-8 sm:pr-14  pl-12">
           <Button onClick={handleAddFriendForm}>
             {showAddFriend ? "Close" : "Add Friend"}
           </Button>
