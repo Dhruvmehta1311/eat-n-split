@@ -1,7 +1,9 @@
+import FriendsList from "./components/FriendsList";
+
 function App() {
   return (
-    <div className="text-3xl bg-black h-screen w-full text-white">
-      EatNSplit
+    <div className=" min-h-screen w-full flex items-center ">
+      <FriendsList />
     </div>
   );
 }
