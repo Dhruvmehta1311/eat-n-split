@@ -5,17 +5,20 @@ const initialFriends = [
   {
     id: 123434,
     name: "Aarav",
+    img: "https://avatar.iran.liara.run/public/40",
     balance: -7,
   },
   {
     id: 123435,
     name: "Ansh",
+    img: "https://avatar.iran.liara.run/public/41",
     balance: 60,
   },
   {
     id: 123436,
     name: "Advik",
-    balance: 54,
+    img: "https://avatar.iran.liara.run/public/42",
+    balance: 0,
   },
 ];
 
@@ -25,7 +28,12 @@ const FriendsList = () => {
       <section className=" p-10 flex flex-row">
         <ul className="flex flex-col gap-4 w-full">
           {initialFriends.map((initialFriend) => (
-            <Friend name={initialFriend.name} key={initialFriend.id} />
+            <Friend
+              img={initialFriend.img}
+              name={initialFriend.name}
+              balance={initialFriend.balance}
+              key={initialFriend.id}
+            />
           ))}
         </ul>
       </section>
