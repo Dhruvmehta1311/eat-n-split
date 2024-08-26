@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const FormSplitBill = ({ initialFriends }) => {
   return (
-    <form className="bg-orange-100 p-2 rounded-sm sm:p-6 w-[98%]  font-semibold mx-auto max-w-full flex flex-col gap-4">
+    <form className="bg-orange-100 p-2 rounded-sm sm:p-6 px-2.5 w-[98%]  font-semibold mx-auto max-w-full flex flex-col gap-4">
       <h3 className="sm:text-4xl text-2xl text-center">
         Split Bill With Clarke
       </h3>
