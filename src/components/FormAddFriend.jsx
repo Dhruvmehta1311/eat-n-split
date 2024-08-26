@@ -23,7 +23,7 @@ const FormAddFriend = () => {
           />
         </section>
         <div className="flex sm:justify-end">
-          <Button>Close</Button>
+          <Button>Add</Button>
         </div>
       </form>
     </div>

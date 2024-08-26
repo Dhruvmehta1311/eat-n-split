@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const FormSplitBill = ({ initialFriends }) => {
   return (
-    <form className="bg-orange-100 p-2 rounded-sm sm:p-6 px-2.5 w-[98%]  font-semibold mx-auto max-w-full flex flex-col gap-4">
+    <form className="bg-orange-100 pb-6 rounded-sm sm:p-4 px-2.5 w-[98%]  font-semibold mx-auto max-w-full flex flex-col gap-4">
       <h3 className="sm:text-4xl text-2xl text-center">
         Split Bill With Clarke
       </h3>
@@ -41,7 +41,9 @@ const FormSplitBill = ({ initialFriends }) => {
         >
           <option value="">You</option>
           {initialFriends.map((initialFriend) => (
-            <option value="">{initialFriend.name}</option>
+            <option key={initialFriend.id} value="">
+              {initialFriend.name}
+            </option>
           ))}
         </select>
       </section>
