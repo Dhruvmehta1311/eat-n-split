@@ -16,13 +16,17 @@ const FriendsList = ({ friends, selectedFriend, handleSelection }) => {
               key={initialFriend.id}
               handleSelection={handleSelection}
               friends={initialFriend}
+              selectedFriend={selectedFriend}
             />
           ))}
         </ul>
       </section>
       {selectedFriend && (
         <section className=" p-2 flex flex-row h-fit">
-          <FormSplitBill initialFriends={friends} />
+          <FormSplitBill
+            initialFriends={friends}
+            selectedFriend={selectedFriend}
+          />
         </section>
       )}
     </div>

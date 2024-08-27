@@ -1,9 +1,21 @@
 import React from "react";
 
-const Friend = ({ friends, name, img, balance, handleSelection }) => {
+const Friend = ({
+  friends,
+  name,
+  img,
+  balance,
+  handleSelection,
+  selectedFriend,
+}) => {
+  const isSelected = selectedFriend && friends.id === selectedFriend.id;
   return (
     <>
-      <li className=" text-base font-semibold w-full hover:bg-orange-100 cursor-pointer rounded items-center justify-between p-2 flex flex-col sm:flex-row gap-4">
+      <li
+        className={`${
+          isSelected ? "bg-orange-100" : ""
+        } text-base font-semibold w-full hover:bg-orange-100 cursor-pointer rounded items-center justify-between p-2 flex flex-col sm:flex-row gap-4`}
+      >
         <div className="flex gap-4">
           <img className="h-10" src={img}></img>
           <div>
@@ -30,7 +42,7 @@ const Friend = ({ friends, name, img, balance, handleSelection }) => {
             onClick={() => handleSelection(friends)}
             className="px-5 py-1.5 bg-orange-400 rounded-md cursor-context-pointer w-full sm:w-fit"
           >
-            Select
+            {isSelected ? "Close" : "Select"}
           </button>
         </>
       </li>

@@ -1,11 +1,11 @@
 import React from "react";
 import Button from "./Button";
 
-const FormSplitBill = ({ initialFriends }) => {
+const FormSplitBill = ({ initialFriends, selectedFriend }) => {
   return (
     <form className="bg-orange-100 pb-6 rounded-sm sm:p-4 px-2.5 w-[98%]  font-semibold mx-auto max-w-full flex flex-col gap-4">
       <h3 className="sm:text-4xl text-2xl text-center">
-        Split Bill With Clarke
+        Split Bill With {selectedFriend.name}
       </h3>
       <section className="flex sm:items-center flex-col sm:flex-row justify-between gap-2 ">
         <label>💸Bill Value: </label>
@@ -24,7 +24,7 @@ const FormSplitBill = ({ initialFriends }) => {
         />
       </section>
       <section className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 ">
-        <label>💸Clarke's Expense: </label>
+        <label>💸{selectedFriend.name} Expense: </label>
         <input
           placeholder=""
           disabled
