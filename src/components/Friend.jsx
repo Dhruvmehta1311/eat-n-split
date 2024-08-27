@@ -26,7 +26,7 @@ const Friend = ({ name, img, balance }) => {
           </div>
         </div>
         <>
-          <button className="px-6 py-2 bg-orange-400 rounded-md cursor-context-pointer w-full sm:w-fit">
+          <button className="px-5 py-1.5 bg-orange-400 rounded-md cursor-context-pointer w-full sm:w-fit">
             Select
           </button>
         </>
