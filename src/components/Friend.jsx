@@ -1,6 +1,6 @@
 import React from "react";
 
-const Friend = ({ name, img, balance }) => {
+const Friend = ({ friends, name, img, balance, handleSelection }) => {
   return (
     <>
       <li className=" text-base font-semibold w-full hover:bg-orange-100 cursor-pointer rounded items-center justify-between p-2 flex flex-col sm:flex-row gap-4">
@@ -26,7 +26,10 @@ const Friend = ({ name, img, balance }) => {
           </div>
         </div>
         <>
-          <button className="px-5 py-1.5 bg-orange-400 rounded-md cursor-context-pointer w-full sm:w-fit">
+          <button
+            onClick={() => handleSelection(friends)}
+            className="px-5 py-1.5 bg-orange-400 rounded-md cursor-context-pointer w-full sm:w-fit"
+          >
             Select
           </button>
         </>

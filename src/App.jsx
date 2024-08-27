@@ -33,6 +33,7 @@ const initialFriends = [
 function App() {
   const [friends, setFriends] = useState(initialFriends);
   const [showAddFriend, setShowAddFriend] = useState(false);
+  const [selectedFriend, setSelectedFriend] = useState(null);
 
   function handleAddFriendForm() {
     setShowAddFriend((showAddFriend) => !showAddFriend);
@@ -43,9 +44,17 @@ function App() {
     setShowAddFriend(false);
   }
 
+  function handleSelection(friend) {
+    setSelectedFriend(friend);
+  }
+
   return (
     <div className=" min-h-screen w-full flex flex-col justify-center p-4">
-      <FriendsList initialFriends={initialFriends} friends={friends} />
+      <FriendsList
+        friends={friends}
+        selectedFriend={selectedFriend}
+        handleSelection={handleSelection}
+      />
       <div className="flex flex-col gap-4">
         {showAddFriend ? (
           <FormAddFriend
