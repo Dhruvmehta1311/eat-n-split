@@ -2,7 +2,7 @@ import React from "react";
 import Friend from "./Friend";
 import FormSplitBill from "./FormSplitBill";
 
-const FriendsList = ({ friends, selectedFriend, handleSelection }) => {
+const FriendsList = ({ friends, selectedFriend, handleSelection, onSplitBill }) => {
   return (
     <div className="w-full  max-w-[900px] mx-auto grid  grid-cols-1 md:grid-cols-2 min-h-[250px]">
       <section className=" p-4 sm:p-8 flex flex-row ">
@@ -26,6 +26,7 @@ const FriendsList = ({ friends, selectedFriend, handleSelection }) => {
           <FormSplitBill
             initialFriends={friends}
             selectedFriend={selectedFriend}
+            onSplitBill={onSplitBill}
           />
         </section>
       )}

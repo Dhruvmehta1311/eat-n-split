@@ -51,12 +51,18 @@ function App() {
     setShowAddFriend(false);
   }
 
+  function handleSplitBill(value){
+    setFriends(friends => friends.map(friend => friend.id === selectedFriend.id ? {...friend, balance: friend.balance + value} : friend))
+    
+  }
+
   return (
     <div className=" min-h-screen w-full flex flex-col justify-center p-4">
       <FriendsList
         friends={friends}
         selectedFriend={selectedFriend}
         handleSelection={handleSelection}
+        onSplitBill={handleSplitBill}
       />
       <div className="flex flex-col gap-4">
         {showAddFriend ? (
